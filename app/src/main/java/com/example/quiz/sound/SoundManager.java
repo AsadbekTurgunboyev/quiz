@@ -51,28 +51,32 @@ public class SoundManager {
                 .setAudioAttributes(audioAttributes)
                 .build();
 
-          sound =  mSoundPool.load(mContext, R.raw.a, 0);
+        initSound(mContext);
 
 
+
+    }
+
+
+    private void initSound(Context mContext) {
         mSoundPoolMap = new SparseIntArray();
         mSoundPoolMap.put(SOUNDPOOLSND_MENU_BTN,
                 mSoundPool.load(mContext, R.raw.a, 0));
         mSoundPoolMap.put(SOUNDPOOLSND_WIN,
-                mSoundPool.load(mContext, R.raw.a, 1));
+                mSoundPool.load(mContext, R.raw.button_select, 1));
         mSoundPoolMap.put(SOUNDPOOLSND_LOOSE,
                 mSoundPool.load(mContext, R.raw.a, 2));
         mSoundPoolMap.put(SOUNDPOOLSND_TICK1,
                 mSoundPool.load(mContext, R.raw.a, 3));
         mSoundPoolMap.put(SOUNDPOOLSND_TICK2,
                 mSoundPool.load(mContext, R.raw.a, 4));
-
-
     }
+
 
     public void playSound(int index) {
         int streamVolume = mAudioManager
                 .getStreamVolume(AudioManager.STREAM_MUSIC);
-        mSoundPool.play(sound, 1, 1,
+        mSoundPool.play(mSoundPoolMap.get(index), 1, 1,
                 0, 0, 1);
     }
 

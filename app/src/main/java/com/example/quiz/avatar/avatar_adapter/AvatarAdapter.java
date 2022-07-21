@@ -63,7 +63,7 @@ public class AvatarAdapter extends RecyclerView.Adapter<AvatarAdapter.MyViewHold
             @Override
             public void onClick(View view) {
 //                soundPool.play(sound,1,1,0,0,1);
-            manager.playSound(2);
+            manager.playSound(1);
             }
         });
 
