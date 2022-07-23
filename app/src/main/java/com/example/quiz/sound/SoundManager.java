@@ -4,12 +4,12 @@ import android.content.Context;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.util.SparseArray;
 import android.util.SparseIntArray;
 
 import com.example.quiz.R;
 
 public class SoundManager {
+
     public static int SOUNDPOOLSND_MENU_BTN = 0;
     public static int SOUNDPOOLSND_WIN = 1;
     public static int SOUNDPOOLSND_LOOSE = 2;
@@ -19,7 +19,6 @@ public class SoundManager {
     public static int SOUNDPOOLSND_OUT_OF_TIME = 6;
     public static int SOUNDPOOLSND_HISCORE = 7;
     public static int SOUNDPOOLSND_CORRECT_LETTER = 8;
-    int sound;
     public static boolean isSoundTurnedOff;
 
     private static SoundManager mSoundManager;
@@ -28,7 +27,6 @@ public class SoundManager {
     private SparseIntArray mSoundPoolMap;
     private AudioManager mAudioManager;
 
-    public static final int maxSounds = 4;
 
     public static SoundManager getInstance(Context context) {
         if (mSoundManager == null) {
@@ -60,6 +58,7 @@ public class SoundManager {
 
     private void initSound(Context mContext) {
         mSoundPoolMap = new SparseIntArray();
+
         mSoundPoolMap.put(SOUNDPOOLSND_MENU_BTN,
                 mSoundPool.load(mContext, R.raw.a, 0));
         mSoundPoolMap.put(SOUNDPOOLSND_WIN,

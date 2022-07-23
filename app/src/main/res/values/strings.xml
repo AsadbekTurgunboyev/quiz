@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="do_action">Do Action</string>
+    <string name="enable">Enable Notifications</string>
+    <string name="disable">Disable Notifications</string>
+
 </resources>
