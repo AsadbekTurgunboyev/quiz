@@ -38,5 +38,7 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
     implementation "androidx.room:room-runtime:$room_version"
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 }

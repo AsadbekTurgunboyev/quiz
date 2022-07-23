@@ -31,18 +31,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Dialog dialog = new Dialog(this);
-//        dialog.setContentView(R.layout.avatar_dialog);
-//        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-//        dialog.getWindow().setGravity(Gravity.CENTER);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.check_daily_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        dialog.getWindow().setGravity(Gravity.CENTER);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 //        RecyclerView rec = dialog.findViewById(R.id.recAvatar);
 //        AvatarAdapter adapter = new AvatarAdapter(this, Avatars_Pictures.avatars);
 //        rec.setAdapter(adapter);
-//        dialog.show();
-        findViewById(R.id.doAc).setOnClickListener(this::doAction);
-        findViewById(R.id.disable).setOnClickListener(this::disableNotification);
-        findViewById(R.id.enable).setOnClickListener(this::enableNotification);
+        dialog.show();
         settings = getSharedPreferences(PREFS, MODE_PRIVATE);
         editor = settings.edit();
 
